@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:todo/localizations.dart';
+import 'package:todo/widgets/home_screen.dart';
 
 void main() => runApp(MyApp());
 
@@ -15,20 +16,7 @@ class MyApp extends StatelessWidget {
         GlobalCupertinoLocalizations.delegate,
       ],
       supportedLocales: AppLocalizationsDelegate.supportedLocals,
-      home: _HomeScreen(),
-    );
-  }
-}
-
-class _HomeScreen extends StatelessWidget {
-  const _HomeScreen({Key key}) : super(key: key);
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Text(AppLocalizations.of(context).title),
-      ),
+      home: HomeScreen(),
     );
   }
 }
