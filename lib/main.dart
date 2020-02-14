@@ -3,9 +3,10 @@ import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:hive/hive.dart';
 import 'package:provider/provider.dart';
-import 'package:todo/localizations.dart';
-import 'package:todo/widgets/home_screen.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
+import 'package:todo/localizations.dart';
+import 'package:todo/models/task.dart';
+import 'package:todo/widgets/home_screen.dart';
 import 'package:todo/widgets/settings_screen/settings_store.dart';
 
 void main() async {
@@ -15,7 +16,11 @@ void main() async {
   final applicationDocumentsDirectory = await path_provider.getApplicationDocumentsDirectory();
   Hive.init(applicationDocumentsDirectory.path);
 
+  // register TaskAdapter type
+  Hive.registerAdapter(TaskAdapter());
+
   // open hive boxes
+  await Hive.openBox<Task>('tasks');
   await Hive.openBox('settings');
 
   runApp(MyApp());
