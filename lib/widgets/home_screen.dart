@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:todo/widgets/settings_screen.dart';
+import 'package:todo/widgets/settings_screen/settings_screen.dart';
 import 'package:todo/widgets/task_screen.dart';
 
 class HomeScreen extends StatefulWidget {
