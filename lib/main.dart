@@ -15,37 +15,33 @@ void main() async {
   final applicationDocumentsDirectory = await path_provider.getApplicationDocumentsDirectory();
   Hive.init(applicationDocumentsDirectory.path);
 
-  // open settings box and create settings store
-  final settingsBox = await Hive.openBox('settings');
-  final settingsStore = SettingsStore(settingsBox);
+  // open hive boxes
+  await Hive.openBox('settings');
 
-  runApp(
-    // add dependencies
-    MultiProvider(
-      providers: [
-        Provider.value(value: settingsStore),
-      ],
-      child: MyApp(),
-    ),
-  );
+  runApp(MyApp());
 }
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final settingsStore = Provider.of<SettingsStore>(context);
+    final settingsStore = SettingsStore();
 
-    return Observer(
-      builder: (_) => MaterialApp(
-        theme: settingsStore.isDarkMode ? ThemeData.dark() : ThemeData.light(),
-        localizationsDelegates: [
-          const AppLocalizationsDelegate(),
-          GlobalWidgetsLocalizations.delegate,
-          GlobalMaterialLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: AppLocalizationsDelegate.supportedLocals,
-        home: HomeScreen(),
+    return MultiProvider(
+      providers: [
+        Provider.value(value: settingsStore),
+      ],
+      child: Observer(
+        builder: (_) => MaterialApp(
+          theme: settingsStore.isDarkMode ? ThemeData.dark() : ThemeData.light(),
+          localizationsDelegates: [
+            const AppLocalizationsDelegate(),
+            GlobalWidgetsLocalizations.delegate,
+            GlobalMaterialLocalizations.delegate,
+            GlobalCupertinoLocalizations.delegate,
+          ],
+          supportedLocales: AppLocalizationsDelegate.supportedLocals,
+          home: HomeScreen(),
+        ),
       ),
     );
   }

@@ -6,9 +6,9 @@ part 'settings_store.g.dart';
 class SettingsStore = _SettingsStore with _$SettingsStore;
 
 abstract class _SettingsStore with Store {
-  final Box _box;
+  final Box _box = Hive.box('settings');
 
-  _SettingsStore(this._box) {
+  _SettingsStore() {
     _isDarkMode = _box.get('isDarkMode') ?? false;
   }
 
