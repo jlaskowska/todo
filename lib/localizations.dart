@@ -12,18 +12,32 @@ class AppLocalizations {
 
   static Map<String, Map<String, String>> _localizedValues = {
     'en': {
-      'title': 'Hello, World!',
+      'createTaskSheetTextFieldTitle': 'Title',
+      'createTaskSheetTextFieldDescription': 'Description',
+      'createTaskSheetButton': 'Create Task',
     },
     'de': {
-      'title': 'Hallo, Welt!',
+      'createTaskSheetTextFieldTitle': 'Titel',
+      'createTaskSheetTextFieldDescription': 'Beschreibung',
+      'createTaskSheetButton': 'Create Task',
     },
     'pl': {
-      'title': 'Witaj, świecie!',
+      'createTaskSheetTextFieldTitle': 'Tytuł',
+      'createTaskSheetTextFieldDescription': 'Opis',
+      'createTaskSheetButton': 'Create Task',
     },
   };
 
-  String get title {
-    return _localizedValues[locale.languageCode]['title'];
+  String get createTaskSheetTextFieldTitle {
+    return _localizedValues[locale.languageCode]['createTaskSheetTextFieldTitle'];
+  }
+
+  String get createTaskSheetTextFieldDescription {
+    return _localizedValues[locale.languageCode]['createTaskSheetTextFieldDescription'];
+  }
+
+  String get createTaskSheetButton {
+    return _localizedValues[locale.languageCode]['createTaskSheetButton'];
   }
 }
 
