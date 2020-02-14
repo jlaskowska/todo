@@ -4,6 +4,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:hive/hive.dart';
 import 'package:provider/provider.dart';
 import 'package:path_provider/path_provider.dart' as path_provider;
+import 'package:todo/conigs/app_themes.dart';
 import 'package:todo/localizations.dart';
 import 'package:todo/models/task.dart';
 import 'package:todo/widgets/home_screen.dart';
@@ -37,7 +38,7 @@ class MyApp extends StatelessWidget {
       ],
       child: Observer(
         builder: (_) => MaterialApp(
-          theme: settingsStore.isDarkMode ? ThemeData.dark() : ThemeData.light(),
+          theme: settingsStore.isDarkMode ? AppThemes.dark : AppThemes.light,
           localizationsDelegates: [
             const AppLocalizationsDelegate(),
             GlobalWidgetsLocalizations.delegate,

@@ -13,6 +13,7 @@ class SettingsScreen extends StatelessWidget {
     return Center(
       child: Observer(
         builder: (context) => Switch(
+          activeColor: Theme.of(context).accentColor,
           value: store.isDarkMode,
           onChanged: (value) {
             store.isDarkMode = value;
