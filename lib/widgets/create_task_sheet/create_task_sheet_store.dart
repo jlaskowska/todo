@@ -36,6 +36,7 @@ abstract class _CreateTaskSheetStore with Store {
       id: Uuid().v4(),
       title: title,
       description: description,
+      createdDate: DateTime.now(),
     );
 
     taskService.addTask(task);
