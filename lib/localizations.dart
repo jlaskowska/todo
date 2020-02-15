@@ -15,16 +15,19 @@ class AppLocalizations {
       'createTaskSheetTextFieldTitle': 'Title',
       'createTaskSheetTextFieldDescription': 'Description',
       'createTaskSheetButton': 'Create Task',
+      'settingsScreenButtonDeleteAll': 'Delete All',
     },
     'de': {
       'createTaskSheetTextFieldTitle': 'Titel',
       'createTaskSheetTextFieldDescription': 'Beschreibung',
       'createTaskSheetButton': 'Create Task',
+      'settingsScreenButtonDeleteAll': 'Alles Löschen',
     },
     'pl': {
       'createTaskSheetTextFieldTitle': 'Tytuł',
       'createTaskSheetTextFieldDescription': 'Opis',
       'createTaskSheetButton': 'Create Task',
+      'settingsScreenButtonDeleteAll': 'Usuń wszystko',
     },
   };
 
@@ -38,6 +41,10 @@ class AppLocalizations {
 
   String get createTaskSheetButton {
     return _localizedValues[locale.languageCode]['createTaskSheetButton'];
+  }
+
+  String get settingsScreenButtonDeleteAll {
+    return _localizedValues[locale.languageCode]['settingsScreenButtonDeleteAll'];
   }
 }
 

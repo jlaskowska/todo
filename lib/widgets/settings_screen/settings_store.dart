@@ -1,5 +1,6 @@
 import 'package:hive/hive.dart';
 import 'package:mobx/mobx.dart';
+import 'package:todo/services/task_service.dart';
 
 part 'settings_store.g.dart';
 
@@ -21,5 +22,9 @@ abstract class _SettingsStore with Store {
   set isDarkMode(bool value) {
     _isDarkMode = value;
     _box.put('isDarkMode', value);
+  }
+
+  void deleteAllTasks() {
+    TaskService().deleteAll();
   }
 }
