@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
+import 'package:todo/localizations.dart';
 import 'package:todo/models/task.dart';
 import 'package:todo/widgets/task_screen/task_screen_store.dart';
 
@@ -43,7 +44,7 @@ class TaskScreen extends StatelessWidget {
                   SnackBar(
                     backgroundColor: Theme.of(context).bottomAppBarColor,
                     content: Text(
-                      'Task \'${task.title}\' dismissed',
+                      AppLocalizations.of(context).taskScreenSnackbarTaskDeleted,
                       style: Theme.of(context).textTheme.body1,
                     ),
                     behavior: SnackBarBehavior.floating,

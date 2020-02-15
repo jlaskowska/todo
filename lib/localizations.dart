@@ -15,19 +15,22 @@ class AppLocalizations {
       'createTaskSheetTextFieldTitle': 'Title',
       'createTaskSheetTextFieldDescription': 'Description',
       'createTaskSheetButton': 'Create Task',
-      'settingsScreenButtonDeleteAll': 'Delete All',
+      'settingsScreenButtonDeleteAll': 'Delete All Tasks',
+      'taskScreenSnackbarTaskDeleted': 'Task deleted.'
     },
     'de': {
       'createTaskSheetTextFieldTitle': 'Titel',
       'createTaskSheetTextFieldDescription': 'Beschreibung',
-      'createTaskSheetButton': 'Create Task',
-      'settingsScreenButtonDeleteAll': 'Alles Löschen',
+      'createTaskSheetButton': 'Aufgabe erstellen',
+      'settingsScreenButtonDeleteAll': 'Alle Aufgaben Löschen',
+      'taskScreenSnackbarTaskDeleted': 'Aufgabe gelöscht.'
     },
     'pl': {
       'createTaskSheetTextFieldTitle': 'Tytuł',
       'createTaskSheetTextFieldDescription': 'Opis',
-      'createTaskSheetButton': 'Create Task',
+      'createTaskSheetButton': 'Utwórz Task',
       'settingsScreenButtonDeleteAll': 'Usuń wszystko',
+      'taskScreenSnackbarTaskDeleted': 'Task usunięty.'
     },
   };
 
@@ -45,6 +48,10 @@ class AppLocalizations {
 
   String get settingsScreenButtonDeleteAll {
     return _localizedValues[locale.languageCode]['settingsScreenButtonDeleteAll'];
+  }
+
+  String get taskScreenSnackbarTaskDeleted {
+    return _localizedValues[locale.languageCode]['taskScreenSnackbarTaskDeleted'];
   }
 }
 
