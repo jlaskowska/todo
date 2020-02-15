@@ -11,4 +11,9 @@ class TaskService {
   void deleteTask(Task task) => _box.delete(task.id);
 
   void deleteAll() => _box.deleteAll(_box.keys);
+
+  void toggleTaskIsCompleted(Task task) {
+    task.isCompleted = !task.isCompleted;
+    addTask(task);
+  }
 }

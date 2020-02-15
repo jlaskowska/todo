@@ -10,4 +10,6 @@ abstract class _TaskScreenStore with Store {
   final _taskService = TaskService();
 
   void deleteTask(Task task) => _taskService.deleteTask(task);
+
+  void toggleTaskIsCompleted(Task task) => _taskService.toggleTaskIsCompleted(task);
 }
