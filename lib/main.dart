@@ -38,6 +38,7 @@ class MyApp extends StatelessWidget {
       ],
       child: Observer(
         builder: (_) => MaterialApp(
+          debugShowCheckedModeBanner: false,
           theme: settingsStore.isDarkMode ? AppThemes.dark : AppThemes.light,
           localizationsDelegates: [
             const AppLocalizationsDelegate(),
