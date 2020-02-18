@@ -45,7 +45,12 @@ class _CreateTaskSheetState extends State<CreateTaskSheet> {
             Observer(
               builder: (_) => RaisedButton(
                 color: Theme.of(context).accentColor,
-                child: Text(AppLocalizations.of(context).createTaskSheetButton),
+                child: Text(
+                  AppLocalizations.of(context).createTaskSheetButton,
+                  style: TextStyle(
+                    color: Colors.white,
+                  ),
+                ),
                 onPressed: store.validTitle
                     ? () {
                         store.addTask();

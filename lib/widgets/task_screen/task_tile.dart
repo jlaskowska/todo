@@ -48,7 +48,10 @@ class TaskTile extends StatelessWidget {
       },
       direction: DismissDirection.endToStart,
       child: Container(
-        margin: const EdgeInsets.all(16.0),
+        margin: const EdgeInsets.symmetric(
+          horizontal: 16.0,
+          vertical: 8.0,
+        ),
         decoration: BoxDecoration(
           color: Theme.of(context).bottomAppBarColor,
           borderRadius: BorderRadius.circular(16.0),
