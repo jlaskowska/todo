@@ -40,6 +40,7 @@ class MyApp extends StatelessWidget {
         builder: (_) => MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: settingsStore.isDarkMode ? AppThemes.dark : AppThemes.light,
+          locale: Locale(settingsStore.language),
           localizationsDelegates: [
             const AppLocalizationsDelegate(),
             GlobalWidgetsLocalizations.delegate,

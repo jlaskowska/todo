@@ -11,6 +11,7 @@ abstract class _SettingsStore with Store {
 
   _SettingsStore() {
     _isDarkMode = _box.get('isDarkMode') ?? false;
+    _language = _box.get('language') ?? 'en'; //TODO choose system language
   }
 
   @observable
@@ -22,6 +23,17 @@ abstract class _SettingsStore with Store {
   set isDarkMode(bool value) {
     _isDarkMode = value;
     _box.put('isDarkMode', value);
+  }
+
+  @observable
+  String _language;
+
+  @computed
+  String get language => _language;
+
+  set language(String value) {
+    _language = value;
+    _box.put('language', value);
   }
 
   void deleteAllTasks() {
