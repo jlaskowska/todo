@@ -3,6 +3,7 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:todo/localizations.dart';
 import 'package:todo/models/task.dart';
+import 'package:todo/widgets/task_screen/task_chart.dart';
 import 'package:todo/widgets/task_screen/task_screen_store.dart';
 import 'package:todo/widgets/task_screen/task_tile.dart';
 
@@ -17,7 +18,8 @@ class TaskScreen extends StatelessWidget {
       valueListenable: Hive.box<Task>('tasks').listenable(),
       builder: (_, Box<Task> box, __) {
         final tasks = box.values.toList();
-        tasks.sort((b, a) => a.createdDate.compareTo(b.createdDate));
+        tasks.sort((b, a) => a.createdDate.compareTo(b.createdDate)); // sort by date, newest first
+        final tasksCompletedPercentage = tasks.where((task) => task.isCompleted).length / tasks.length;
 
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -46,9 +48,9 @@ class TaskScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  Placeholder(
-                    fallbackWidth: 60,
-                    fallbackHeight: 60,
+                  TaskChart(
+                    completedPercent: tasksCompletedPercentage,
+                    size: 60.0,
                   ),
                 ],
               ),
