@@ -3,7 +3,7 @@ import 'package:hive/hive.dart';
 import 'package:hive_flutter/hive_flutter.dart';
 import 'package:todo/localizations.dart';
 import 'package:todo/models/task.dart';
-import 'package:todo/widgets/task_screen/task_chart.dart';
+import 'package:todo/widgets/task_screen/animated_task_chart.dart';
 import 'package:todo/widgets/task_screen/task_screen_store.dart';
 import 'package:todo/widgets/task_screen/task_tile.dart';
 
@@ -48,7 +48,7 @@ class TaskScreen extends StatelessWidget {
                       ),
                     ],
                   ),
-                  TaskChart(
+                  AnimatedTaskChart(
                     completedPercent: tasksCompletedPercentage,
                     size: 60.0,
                   ),
