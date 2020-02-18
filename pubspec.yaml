@@ -20,6 +20,7 @@ dependencies:
   hive_generator: ^0.7.0
   path_provider: ^1.6.0
   uuid: ^2.0.4
+  grouped_buttons: 1.0.4
 
 dev_dependencies:
   flutter_test:

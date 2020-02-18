@@ -20,7 +20,8 @@ class AppLocalizations {
       'taskScreenTodaysTaskText': "Today's Tasks",
       'taskScreenGreetingMorning': 'Good Morning',
       'taskScreenGreetingAfternoon': 'Good Afternoon',
-      'taskScreenGreetingEvening': 'Good Evening'
+      'taskScreenGreetingEvening': 'Good Evening',
+      'settingsScreenLanguageLabel': 'Language',
     },
     'de': {
       'createTaskSheetTextFieldTitle': 'Titel',
@@ -31,7 +32,8 @@ class AppLocalizations {
       'taskScreenTodaysTaskText': 'Heutige Aufgaben',
       'taskScreenGreetingMorning': 'Guten Morgen',
       'taskScreenGreetingAfternoon': 'Guten Tag',
-      'taskScreenGreetingEvening': 'Guten Abend'
+      'taskScreenGreetingEvening': 'Guten Abend',
+      'settingsScreenLanguageLabel': 'Sprache',
     },
     'pl': {
       'createTaskSheetTextFieldTitle': 'Tytuł',
@@ -42,7 +44,8 @@ class AppLocalizations {
       'taskScreenTodaysTaskText': 'Zadania na dziś',
       'taskScreenGreetingMorning': 'Dzień Dobry',
       'taskScreenGreetingAfternoon': 'Dzień Dobry',
-      'taskScreenGreetingEvening': 'Dobry wieczór'
+      'taskScreenGreetingEvening': 'Dobry wieczór',
+      'settingsScreenLanguageLabel': 'Język',
     },
   };
 
@@ -79,6 +82,10 @@ class AppLocalizations {
     } else {
       return _localizedValues[locale.languageCode]['taskScreenGreetingEvening'];
     }
+  }
+
+  String get settingsScreenLanguageLabel {
+    return _localizedValues[locale.languageCode]['settingsScreenLanguageLabel'];
   }
 }
 
