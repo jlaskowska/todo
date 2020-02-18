@@ -43,11 +43,14 @@ class _HomeScreenState extends State<HomeScreen> {
         child: const Icon(Icons.add),
         onPressed: () {
           showModalBottomSheet(
+            isScrollControlled: true,
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.circular(15.0),
             ),
             context: context,
-            builder: (_) => CreateTaskSheet(),
+            builder: (_) => SingleChildScrollView(
+              child: CreateTaskSheet(),
+            ),
           );
         },
       ),
