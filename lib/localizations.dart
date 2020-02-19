@@ -22,6 +22,7 @@ class AppLocalizations {
       'taskScreenGreetingAfternoon': 'Good Afternoon',
       'taskScreenGreetingEvening': 'Good Evening',
       'settingsScreenLanguageLabel': 'Language',
+      'settingsScreenDarkModeLabel': 'Dark mode',
     },
     'de': {
       'createTaskSheetTextFieldTitle': 'Titel',
@@ -34,6 +35,7 @@ class AppLocalizations {
       'taskScreenGreetingAfternoon': 'Guten Tag',
       'taskScreenGreetingEvening': 'Guten Abend',
       'settingsScreenLanguageLabel': 'Sprache',
+      'settingsScreenDarkModeLabel': 'Dunkelmodus',
     },
     'pl': {
       'createTaskSheetTextFieldTitle': 'Tytuł',
@@ -46,6 +48,7 @@ class AppLocalizations {
       'taskScreenGreetingAfternoon': 'Dzień Dobry',
       'taskScreenGreetingEvening': 'Dobry wieczór',
       'settingsScreenLanguageLabel': 'Język',
+      'settingsScreenDarkModeLabel': 'Tryb nocny',
     },
   };
 
@@ -86,6 +89,10 @@ class AppLocalizations {
 
   String get settingsScreenLanguageLabel {
     return _localizedValues[locale.languageCode]['settingsScreenLanguageLabel'];
+  }
+
+  String get settingsScreenDarkModeLabel {
+    return _localizedValues[locale.languageCode]['settingsScreenDarkModeLabel'];
   }
 }
 

@@ -21,16 +21,32 @@ class SettingsScreen extends StatelessWidget {
     return Center(
       child: Column(
         children: <Widget>[
-          Observer(
-            builder: (_) => Switch(
-              activeColor: Theme.of(context).accentColor,
-              value: store.isDarkMode,
-              onChanged: (value) => store.isDarkMode = value,
+          SizedBox(height: 20),
+          Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 20.0),
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              children: <Widget>[
+                Text(AppLocalizations.of(context).settingsScreenDarkModeLabel),
+                Observer(
+                  builder: (_) => Switch(
+                    activeColor: Theme.of(context).accentColor,
+                    value: store.isDarkMode,
+                    onChanged: (value) => store.isDarkMode = value,
+                  ),
+                ),
+              ],
             ),
           ),
+          SizedBox(height: 40),
           Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
             children: <Widget>[
-              Text(AppLocalizations.of(context).settingsScreenLanguageLabel),
+              Padding(
+                padding: const EdgeInsets.symmetric(horizontal: 20.0),
+                child: Text(AppLocalizations.of(context).settingsScreenLanguageLabel),
+              ),
+              SizedBox(height: 20),
               Observer(
                 builder: (_) => RadioButtonGroup(
                   activeColor: Theme.of(context).accentColor,
@@ -40,6 +56,9 @@ class SettingsScreen extends StatelessWidget {
                 ),
               ),
             ],
+          ),
+          SizedBox(
+            height: 40,
           ),
           RaisedButton(
             onPressed: () => store.deleteAllTasks(),
