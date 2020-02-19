@@ -19,7 +19,8 @@ class TaskScreen extends StatelessWidget {
       builder: (_, Box<Task> box, __) {
         final tasks = box.values.toList();
         tasks.sort((b, a) => a.createdDate.compareTo(b.createdDate)); // sort by date, newest first
-        final tasksCompletedPercentage = tasks.where((task) => task.isCompleted).length / tasks.length;
+        final completedTasks = tasks.where((task) => task.isCompleted);
+        double tasksCompletedPercentage = completedTasks.length > 0 ? completedTasks.length / tasks.length : 0;
 
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
