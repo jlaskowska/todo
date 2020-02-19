@@ -1,5 +1,5 @@
 name: todo
-description: A new Flutter project.
+description: A Flutter project where the user can keep track of their todos.
 version: 1.0.0+1
 
 environment:

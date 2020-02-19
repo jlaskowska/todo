@@ -1,16 +1,22 @@
 # todo
 
-A new Flutter project.
+A Flutter project where the user can keep track of their todos.
 
-## Getting Started
+Design inspired by [To Do App | Light / Dark Mode 🌑🌕](https://dribbble.com/shots/8294981-To-Do-App-Light-Dark-Mode) by [Sveta Tumanova](https://dribbble.com/sielurii).
 
-This project is a starting point for a Flutter application.
+## Screenshots
 
-A few resources to get you started if this is your first Flutter project:
+|                     |                              |                              |                              |                              |
+| --------------------| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
+![](docs/gifs/01.gif) | ![](docs/screenshots/01.png) | ![](docs/screenshots/02.png) | ![](docs/screenshots/03.png) | ![](docs/screenshots/04.png) |
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+## Technical Info
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+- The app consists of a single screen `HomeScreen` with two tabs `TaskScreen` and `SettingsScreen`.
+- A floating action button is used to show `CreateTaskSheet`.
+- The app supports both light and dark mode.
+- The app is localized into three languages: English, German and Polish.
+- `CustomPainter` is used to draw a chart illustrating the percentage of completed tasks. `AnimatedBuilder` is used to animate this chart.
+- Hive is used to store all tasks and user settings to the device.
+- `Provider` is used for dependency injection.
+- `MobX` is used as the project's state management solution.
