@@ -6,9 +6,9 @@ Design inspired by [To Do App | Light / Dark Mode 🌑🌕](https://dribbble.com
 
 ## Screenshots
 
-|                     |                              |                              |                              |                              |
-| --------------------| ---------------------------- | ---------------------------- | ---------------------------- | ---------------------------- |
-| ![](docs/gifs/01.gif) | ![](docs/screenshots/01.png) | ![](docs/screenshots/02.png) | ![](docs/screenshots/03.png) | ![](docs/screenshots/04.png) |
+|                       |                              |                              |                              |
+|-----------------------| ---------------------------- | ---------------------------- | ---------------------------- |
+| ![](docs/gifs/01.gif) | ![](docs/screenshots/01.png) | ![](docs/screenshots/02.png) | ![](docs/screenshots/03.png) |
 
 ## Technical Info
 
